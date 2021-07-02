@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableZuulProxy
-public class BankApplication {
+public class ApiGatewayBankApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BankApplication.class, args);
+		SpringApplication.run(ApiGatewayBankApplication.class, args);
 	}
 
 }
