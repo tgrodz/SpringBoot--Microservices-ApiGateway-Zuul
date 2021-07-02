@@ -1,0 +1,27 @@
+server:
+  port: 8100
+
+zuul:
+  routes:
+    cashbox-microservice:
+      url: http://localhost:8082
+    balance-microservice:
+      url: http://localhost:8081
+    client-microservice:
+      url: http://localhost:8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+# Check the Url for our created filter
+# http://localhost:8100/actuator/filters
+
+# Check the URl for our routes to diffeerent service
+# http://localhost:8100/actuator/routes
+# http://localhost:8100/actuator/routes/details
